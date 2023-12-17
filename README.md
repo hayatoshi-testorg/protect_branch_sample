@@ -14,7 +14,7 @@ Install the Express and Octokit modules using the following command:
 npm install express body-parser octokit
 ```
 
-## Create the code:
+## Create the Code:
 [Sample code](https://github.com/hayatoshi-testorg/protect_branch_sample/blob/main/protect_main_branch.js)  
 The source code summary is that once the Repository's created event is detected via webhook, the following two APIs are called to protect the main branch and create an Issue.  
 
