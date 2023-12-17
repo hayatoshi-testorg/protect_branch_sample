@@ -21,13 +21,11 @@ app.post('/webhook', async (req, res) => {
         const repositoryName = data.repository.name;
         const mainBranchName = 'main'; // Main branch name (default is 'main')
         try {
-            // Before protecting the Main Branch
             await notifyRepositoryIssueBefore(repositoryName, mainBranchName);
  
             // Protect the Main Branch
             await protectMainBranch(repositoryName, mainBranchName);
 
-            // Notify issues within the repository
             await notifyRepositoryIssue(repositoryName, mainBranchName);
         } catch (error) {
             console.error('Error:', error.message);
