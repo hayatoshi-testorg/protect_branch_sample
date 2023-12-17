@@ -49,7 +49,7 @@ async function notifyRepositoryIssueBefore(repositoryName, mainBranchName) {
 
     // Send a request to GitHub API to add a comment to the issue
     await octokit.request("POST /repos/{owner}/{repo}/issues", {
-        owner: "<set owner>",
+        owner: "<set owner>", // Set your owner
         repo: repositoryName,
         title: 'notifyRepositoryIssue',
         body: message
@@ -62,7 +62,7 @@ async function notifyRepositoryIssue(repositoryName, mainBranchName) {
 
     // Send a request to GitHub API to add a comment to the issue
     await octokit.request('POST /repos/{owner}/{repo}/issues/1/comments', {
-        owner: "<set owner>",
+        owner: "<set owner>", // Set your owner
         repo: repositoryName,
         title: 'notifyRepositoryIssue',
         body: message
